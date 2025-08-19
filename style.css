@@ -13,7 +13,7 @@ body {
 .top-header-ad {
     margin: 0 auto;
     max-width: 1240px;
-    padding: 0 38px;
+    padding: 0 16px;
     width: 100%;
 }
 
@@ -190,6 +190,16 @@ a {
     position: relative;
 }
 
+.hamburger {
+    display: none;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+}
+
 /* Menu */
 
 .menu_wrap {
@@ -200,7 +210,6 @@ a {
 .menu_links {
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
     height: 72px;
     max-width: max-content;
 }
@@ -354,8 +363,13 @@ img {
 
 .flex {
     display: flex;
-    align-items: center;
     width: 100%;
+    flex-direction: row;
+}
+
+.img-flex {
+    display: flex;
+    width: 50%;
 }
 
 .badge {
@@ -431,6 +445,7 @@ img {
 
 .product-para,
 .product-title {
+    max-width: 173px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -445,14 +460,17 @@ img {
     line-height: 1.5;
 }
 
+.product-content-flex {
+    display: flex;
+}
+
 .downloads {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 6px;
     margin: 12px 0;
-    padding: 7px 0;
-    max-width: 150px;
+    padding: 7px 35px;
     width: 100%;
     border-left: 1px solid #ebebeb;
 }
@@ -510,6 +528,10 @@ img {
     line-height: 1.1;
     margin-bottom: 8px;
     margin-left: 18px;
+}
+
+.repo-flex {
+    display: flex;
 }
 
 .ratings {
@@ -978,3 +1000,231 @@ li {
 }
 
 /* Responsive */
+
+@media (max-width: 1068px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .menu_link {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .menu_wrap,
+    .ext-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .sidebar {
+        max-width: 450px;
+    }
+
+    .footer_wrap {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        top: 5px;
+    }
+
+    .sidebar {
+        max-width: 450px;
+    }
+
+    .alert {
+        display: none;
+    }
+
+    .footer_menu {
+        width: 50%;
+    }
+
+    .footer_wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .header_link {
+        display: none;
+    }
+
+    .hamburger {
+        height: 28px;
+        width: 28px;
+        top: 0px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .app-size {
+        margin: 12px 0 12px 236px;
+    }
+
+    .img-flex {
+        width: 67%;
+    }
+
+    .product-para,
+    .product-title {
+        overflow: visible;
+    }
+
+    .sidebar {
+        max-width: 450px;
+    }
+
+    .downloads,
+    .reputation,
+    .app-size {
+        border-left: none;
+    }
+
+    .footer_wrap {
+        flex-direction: column;
+    }
+
+    .footer_links {
+        align-items: center;
+    }
+
+    .footer_copyright {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .product-para,
+    .product-title {
+        overflow: visible;
+    }
+
+
+    .downloads {
+        padding: 7px 2px;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .product-content-flex {
+        flex-direction: column;
+    }
+
+    .repo-flex {
+        justify-content: space-between;
+    }
+
+    .reputation {
+        padding-left: 0px;
+    }
+
+    .reputation-text {
+        margin-left: 2px;
+    }
+
+    .app-size {
+        margin: 12px 0 12px 82px;
+    }
+
+    .sidebar {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 394px) {
+
+    .product-para,
+    .product-title {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .product-info {
+        width: 124%;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .product-para,
+    .product-title {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .product-info {
+        width: 124%;
+    }
+
+    .downloads {
+        padding: 7px 2px;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .product-content-flex {
+        flex-direction: column;
+    }
+
+    .repo-flex {
+        justify-content: space-between;
+    }
+
+    .reputation {
+        padding-left: 0px;
+    }
+
+    .reputation-text {
+        margin-left: 2px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .product-para,
+    .product-title {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .product-info {
+        width: 124%;
+    }
+}
+
+@media (max-width: 294px) {
+
+    .product-para,
+    .product-title {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .product-info {
+        width: 70%;
+    }
+}
