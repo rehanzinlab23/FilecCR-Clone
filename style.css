@@ -32,7 +32,7 @@ body {
 .header_nav {
     align-items: center;
     display: flex;
-    gap: 16px;
+    gap: 24px;
     height: 70px;
 }
 
